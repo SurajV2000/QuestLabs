@@ -5,6 +5,7 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
+  ModalHeader,
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -35,9 +36,16 @@ const Bot = () => {
         <Image src={commet} width={"60px"} />
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose} className="modal_body">
+      <Modal
+        motionPreset="slideInBottom"
+        isOpen={isOpen}
+        onClose={onClose}
+        className="modal_body"
+      >
         <ModalOverlay />
+
         <ModalContent>
+          <ModalHeader>HI I AM BOT... How Can i help you</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <ModalData />
